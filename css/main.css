@@ -25,6 +25,15 @@ main{
   height: 55px;
   background-color: #fff;
   border-radius: 50%;
+  animation: moveright ease-in-out 1.5s infinite;
+}
+@keyframes moveright {
+  from{
+  transform: translateX(0) rotateX(0);
+  }
+  to{
+  transform: translateX(100px) rotateX(360deg);
+  }
 }
 .rect{
   position: absolute;
@@ -77,12 +86,12 @@ main{
 }
 .white_line{
   position: absolute;
-  left: 770px;
-  top: 00px;
-  width: 6.5px;
-  height: 365px;
+  left: 640px;
+  top: 130px;
+  width: 365px;
+  height: 6.5px;
   background-color: #fff;
-  transform: rotate(-105deg);
+  transform: rotate(160deg);
 }
 
 .black_fat{
