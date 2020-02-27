@@ -1,3 +1,5 @@
+let controller = new ScrollMagic.Controller()
+
 let circleBigAnim = anime({
   targets: '.circle_big',
   background: "rgba(8, 37, 103)",
@@ -91,11 +93,77 @@ let blackLineThinAnim = anime({
     easing: "easeInOutSine",
     loop: true
   })
+let line1Anim = anime({
+  targets: ".stairs .line1",
+  translateX: [800, 200],
+  easing: "easeInOutQuad"
+})
+new ScrollMagic.Scene({
+  triggerElement: line1Anim,
+  triggerHook: "onCener",
+  duration: 200
+})
+.addTo(controller)
+.on("center", ()=>{
+  line1Anim.play()
+})
 
-  // let blackFatAnim = anime({
-  //   targets: ".black_fat",
-  //   rotate: [100],
-  //   duration: 1600,
-  //   direction: "alternate",
-  //   loop: true
-  // })
+let line2Anim = anime({
+  targets: ".stairs .line2",
+  translateX: [0, 300],
+  easing: "easeInOutQuad"
+})
+new ScrollMagic.Scene({
+  triggerElement: line2Anim,
+  triggerHook: "onCener",
+  duration: 200
+})
+.addTo(controller)
+.on("center", ()=>{
+  line2Anim.play()
+})
+
+
+
+
+
+
+
+
+// let tween = new TimelineMax()
+// .to(".train", 1, {top: "-=200",
+// onStart: function()})
+
+// let trainAnim2 = anime({
+//   targets: ".train",
+//   translateXY: 200,
+//   easing: "easeOutSine"
+// })
+// // let tween = TweenMax.staggerFromTo(".train", 2, {top: 1000, ease: "easeInOutQuad"}, 0.15)
+// new ScrollMagic.Scene({
+//   triggerElement: trainAnim2,
+//   triggerHook: 0.5,
+//   duration: 200,
+//   offset: -100
+// })
+// .addTo(controller)
+// .on("leave", ()=> {
+//   trainAnim2.play()
+// })
+//
+// let trainAnim = anime({
+//   targets: ".train",
+//   translateX: [0, 300],
+//   easing: "easeOutSine"
+// })
+//
+// new ScrollMagic.Scene({
+//  triggerElement: trainAnim,
+//  triggerHook: 0.1,
+//  duration: 200,
+//  offset: -100
+// })
+// .addTo(controller)
+// .on("enter", ()=> {
+// trainAnim.play()
+// })

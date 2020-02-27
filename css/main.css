@@ -123,6 +123,87 @@ main{
   width: 332px;
   height: 332px;
 }
-.rect_2{
-  display: none;
+.train{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 1000px;
+  transform: translateX(-1200px);
+}
+.train .circ{
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background-color: #A32704;
+}
+.trias{
+  display: flex;
+  flex-direction: row;
+  top: 1200px;
+  position: relative;
+}
+/* .trias .angle1,
+.trias .angle2,
+.trias .angle3,
+.trias .angle4,
+.trias .angle5,
+.trias .angle6,
+.trias .angle7,
+.trias .angle8{
+  width: 0;
+  height: 0;
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-top: 110px solid #000;
+} */
+
+.stairs{
+  position: absolute;
+  top: 1300px;
+}
+.stairs .line1,
+.stairs .line2,
+.stairs .line3,
+.stairs .line4,
+.stairs .line5,
+.stairs .line6,
+.stairs .line7{
+  width: 230px;
+  height: 10px;
+  background-color: #000;
+}
+.stairs .line1{
+  margin-left: 800px;
+}
+.stairs .line2{
+width: 800px;
+height: 30px;
+margin-left: 00px;
+margin-top: 100px;
+}
+.stairs .line3{
+  width: 650px;
+  height: 10px;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.stairs .line4{
+  width: 250px;
+  margin-left: 500px;
+  margin-top: 100px;
+}
+.stairs .line5{
+  width: 500px;
+  margin-top: 100px;
+}
+.stairs .line6{
+  width: 600px;
+  height: 30px;
+  margin-left: 800px;
+  margin-top: 100px;
+}
+.stairs .line7{
+  width: 340px;
+  margin-left: 1100px;
+  margin-top: 100px;
 }
